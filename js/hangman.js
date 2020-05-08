@@ -67,10 +67,11 @@ function generateList() {
         // console.log(ans);
         hint = malwares.indexOf(ans);
         hintGenerated.push(hint);
-        //malwares.splice(malwares.indexOf(ans), 1);  //prevent duplictes from generating
         //hints.splice(hints.indexOf(ans), 1);
-        //console.log(hints);
-        //console.log(wordsGenerated);
+        //malwares.splice(malwares.indexOf(ans), 1);  //prevent duplictes from generating
+        
+        console.log(hints);
+        console.log(wordsGenerated);
     }
     answer = wordsGenerated[0];
     console.log(answer);
@@ -132,6 +133,13 @@ function handleGuess(chosenLetter){
         
         
     }
+}
+
+document.body.addEventListener('keypress', getKey);
+function getKey(event){
+    var x = event.key;
+    console.log(x);
+    handleGuess(x);
 }
 
 /* function updateBackground() {
