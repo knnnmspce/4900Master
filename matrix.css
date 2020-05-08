@@ -1,0 +1,83 @@
+/* Colors
+green: #046E04
+black: #040204
+white: #b7b9b7
+*/
+
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 24px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body {
+    background-image: url('background.jpg');
+    font-family: Tahoma, Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: whitesmoke;
+    height: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.main {
+    margin-bottom: 5px;
+}
+
+button {
+    font-size: 18px;
+    background-color: gray;
+    color: #423b39;
+    border: hidden;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color: #85786a;
+    color: whitesmoke
+}
+
+.butn{
+    font-size:35px;
+    padding: 10px;
+    background-color: burlywood;
+    color: #85786a;
+    border:none;
+    text-align:center;
+    border-radius:8px;
+    margin-top: 50px;
+    transition-duration: 0.4s;
+}
+.butn:hover{
+    background-color: whitesmoke;
+    color: #85786a;
+}
+
+.container {
+    margin-top: 100px;
+    font-size: 24px;
+    margin-left: 325px;
+    margin-right: 325px;
+    padding: 10px 0px 50px;
+    background-color: #423b39;
+    color: #85786a;
+    border: hidden;
+    border-radius: 12px;
+}
+
+.float-right {
+    position: absolute;
+    color: #85786a;
+    top: 0;
+    right: 0;
+}
