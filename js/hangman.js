@@ -37,6 +37,7 @@
   let hintIndex = '';
   let wordsGenerated = [];
   let hintGenerated = [];
+  let rep = [];
   let correct = 0;
   let lvldstatus = false;
   let gamestatus = true;
@@ -56,19 +57,24 @@
 //     }
 //  }
 
-function generateList() {
+function generateList(n) {
     var i;
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < n; i++) {
         var ans;
         var hint;
         ans = malwares[Math.floor(Math.random() * malwares.length)];
-        wordsGenerated.push(ans);
-        // console.log(malwares);
-        // console.log(ans);
-        hint = malwares.indexOf(ans);
-        hintGenerated.push(hint);
-        //hints.splice(hints.indexOf(ans), 1);
-        //malwares.splice(malwares.indexOf(ans), 1);  //prevent duplictes from generating
+        if (rep.includes(ans)){
+            console.log('repeat occured')
+            generateList(1);
+        } else{
+            wordsGenerated.push(ans);
+            rep.push(ans);
+            hint = malwares.indexOf(ans);
+            hintGenerated.push(hint);
+            
+        }
+        
+
         
         console.log(hints);
         console.log(wordsGenerated);
@@ -245,11 +251,12 @@ function reset(){
     guessed = [];
     wordsGenerated = [];
     hintGenerated = [];
+    rep = [];
     answer = '';
     hintIndex = '';
     correct = 0;
 
-    generateList();
+    generateList(3);
     console.log(wordsGenerated);
     guessedWord();
     updateLives();
@@ -269,7 +276,7 @@ document.getElementById('lives').innerHTML = lives;
 
   
  //randomWord();
- generateList();
+ generateList(3);
  generateButtons();
  guessedWord();
  
